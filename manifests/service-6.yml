@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aksserviceertugrul-19ee"
+    labels:
+        app: "aksserviceertugrul-19ee"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "aksserviceertugrul-19ee"
