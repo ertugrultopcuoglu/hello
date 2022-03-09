@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksserviceertugrul-19ee"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksserviceertugrul-19ee"
+  template:
+    metadata:
+      labels:
+        app: "aksserviceertugrul-19ee"
+    spec:
+      containers:
+        - name: "aksserviceertugrul-19ee"
+          image: "rglabsaksertugrul.azurecr.io/aksserviceertugrul"
+          ports:
+          - containerPort: 80
